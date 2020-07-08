@@ -1,0 +1,9 @@
+The Top-Level Functionalities in the experiment are:
+1)A dropdown menu to display the languages that are available.
+2)When the words are selected,"reform-the-sentence" button is being activated.
+3)After clicking the "reform-the-sentence" button,the words are put back and there would be a chance to reselect them.
+4)Once,all the words are selected,"Check the corectness of this sentence" button is activated.
+5)If the answer you submit is wrong,a button that says, "get correct answer" is activated.
+6)After clicking the button to get the answers,you will be shown all the possible answers.
+7)Besides these features,it would be useful if we get the count of words that we already selected while reforming the sentence.
+8)If in case, the answer is right,it would be better to activate a button that says,"hide the correct answer" so that the right answer is hid.
