@@ -2,10 +2,12 @@
 <html>
 <head>
 	<title>IndexPage</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
 
 <style>
 
@@ -85,9 +87,18 @@ padding-bottom: 10px
 {
    font-size:16px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-     line-height: 0.3;
+     line-height: 0.1;
      color:#00009C;
      font-weight: bolder;
+
+}
+button {
+  width: 90px;
+  height: 30px;
+ 
+  margin: 2px;
+  
+  
 
 }
 
@@ -107,10 +118,14 @@ padding-bottom: 10px
     <center>
       <select onchange="fun1()">
          <option value="none" selected>---Select Language---</option>
-      <option  id="eng">English</option>
-   <option value="Hindi" id="hin">Hindi</option></select><br><br>
+      <option  id="eng" onchange="clear()">English</option>
+   <option value="Hindi" id="hin" onchange="clear()">Hindi</option></select><br><br>
    <p id="demo"></p>
    <p id="demo1" style="color:blue; font-style: italic;font-weight:lighter;"></p>
+   <p id="demo3"></p>
+   <p id="demo4"></p>
+  
+   
  </center>
   </section>
   
