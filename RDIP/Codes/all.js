@@ -22,6 +22,9 @@ var mainhin=["राम और श्याम बाजार गयें","�
 function fun1()
 {
 	document.getElementById("demo3").innerHTML=""
+	document.getElementById("demo5").innerHTML=""
+	document.getElementById("demo4").innerHTML=""
+	document.getElementById("b3").style.visibility="hidden";
 	count=0
 
 if(document.getElementById("eng").selected)
@@ -47,6 +50,20 @@ for(i=0;i<x1.length;i++)
   button.innerHTML = x1[i]
   body.appendChild(button);
      
+button.addEventListener ("click", function() {
+	document.getElementById("demo4").innerHTML="Formed Sentence<span style='font-style:italic;color:blue;font-weight:lighter'>(after selecting words):</span>";
+    document.getElementById("demo5").innerHTML+=this.innerHTML+"  ";
+    this.style.visibility="hidden";
+    count=count+1;
+    if (count==1) 
+     {
+     	document.getElementById("b3").style.visibility="visible";
+     }
+    if (count==x1.length) 
+     {
+     	document.getElementById("b4").style.visibility="visible";
+     }
+});
 
 }
 
@@ -74,8 +91,25 @@ for(i=0;i<y1.length;i++)
 		 let button = document.createElement("button");
   button.innerHTML = y1[i]
   body.appendChild(button)
+
+button.addEventListener ("click", function() {
+	document.getElementById("demo4").innerHTML="Formed Sentence<span style='font-style:italic;color:blue;font-weight:lighter'>(after selecting words):</span>";
+    document.getElementById("demo5").innerHTML+=this.innerHTML+"  ";
+    this.style.visibility="hidden";
+    count=count+1;
+    if (count==1) 
+     {
+     	document.getElementById("b3").style.visibility="visible";
+     }
+    if (count==x1.length) 
+     {
+     	document.getElementById("b4").style.visibility="visible";
+     }
+});
+
 }
 }
+
 
 else
 {
@@ -84,3 +118,5 @@ else
 	document.getElementById("demo3").innerHTML=""
 }
 }
+
+
