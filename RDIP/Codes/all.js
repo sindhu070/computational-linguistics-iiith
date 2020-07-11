@@ -15,9 +15,10 @@ var main1=[["राम और श्याम बाजार गयें","र
 ["राम सोया और श्याम भी","श्याम सोया और राम भी","सोया श्याम और राम भी","सोया राम और श्याम भी"],
 ["मैंने उसे बताया कि राम सो रहा है","मैंने उसे बताया कि सो रहा है राम","उसे मैंने बताया कि राम सो रहा है","उसे मैंने बताया कि सो रहा है राम","मैंने बताया उसे कि राम सो रहा है","मैंने बताया उसे कि सो रहा है राम","उसे बताया मैंने कि राम सो रहा है","उसे बताया मैंने कि सो रहा है राम","बताया मैंने उसे कि राम सो रहा है","बताया मैंने उसे कि सो रहा है राम","बताया उसे मैंने कि राम सो रहा है","बताया उसे मैंने कि सो रहा है राम"],
 ["राम खाकर सोया","खाकर राम सोया","राम सोया खाकर","खाकर सोया राम","सोया राम खाकर","सोया खाकर राम"],
-["बिल्लियों को मारकर कुत्ता सो गया"	,"मारकर बिल्लियों को कुत्ता सो गया"	 ,"बिल्लियों को मारकर सो गया कुत्ता","मारकर बिल्लियों को सो गया कुत्ता"	,"कुत्ता सो गया बिल्लियों को मारकर"	,"कुत्ता सो गया मारकर बिल्लियों को","सो गया कुत्ता बिल्लियों को मारकर","सो गया कुत्ता मारकर बिल्लियों को"],
+["बिल्लियों को मारकर कुत्ता सो गया"	,"मारकर बिल्लियों को कुत्ता सो गया","बिल्लियों को मारकर सो गया कुत्ता","मारकर बिल्लियों को सो गया कुत्ता","कुत्ता सो गया बिल्लियों को मारकर","कुत्ता सो गया मारकर बिल्लियों को","सो गया कुत्ता बिल्लियों को मारकर","सो गया कुत्ता मारकर बिल्लियों को"],
 ["एक लाल किताब वहाँ है","एक लाल किताब है वहाँ","वहाँ है एक लाल किताब","है वहाँ एक लाल किताब"],
-["एक बड़ी सी किताब वहाँ है	","एक बड़ी सी किताब है वहाँ","बड़ी सी एक किताब वहाँ है","बड़ी सी एक किताब है वहाँ","वहाँ है एक बड़ी सी किताब","वहाँ है बड़ी सी एक किताब"," है वहाँ एक बड़ी सी किताब","है वहाँ बड़ी सी एक किताब"]]
+["एक बड़ी सी किताब वहाँ है","एक बड़ी सी किताब है वहाँ","बड़ी सी एक किताब वहाँ है","बड़ी सी एक किताब है वहाँ","वहाँ है एक बड़ी सी किताब","वहाँ है बड़ी सी एक किताब","है वहाँ एक बड़ी सी किताब","है वहाँ बड़ी सी एक किताब"]];
+
 var mainhin=["राम और श्याम बाजार गयें","राम सोया और श्याम भी","मैंने उसे बताया कि राम सो रहा है","राम खाकर सोया","बिल्लियों को मारकर कुत्ता सो गया"	,"एक लाल किताब वहाँ है","एक बड़ी सी किताब वहाँ है	"]
 
 
@@ -31,6 +32,8 @@ x1=x.split(" ");
 	document.getElementById("demo3").innerHTML=""
 	document.getElementById("demo5").innerHTML=""
 	document.getElementById("demo4").innerHTML=""
+	document.getElementById("demo6").innerHTML=""
+
 
 
 	document.getElementById("b3").style.visibility="hidden";
@@ -89,13 +92,8 @@ button.addEventListener ("click", function() {
 
 }
 }
-
-   
-
 else if (document.getElementById("hin").selected) 
 { 
-	
-
 	document.getElementById("demo").innerHTML="Form a sentence(Declarative or Interrogative or any other type) from the given words"
 	document.getElementById("demo1").innerHTML="(select the buttons in proper order)";
 	
@@ -156,12 +154,78 @@ function reset()
    document.getElementById('button'+i).style.visibility="visible";
     document.getElementById('demo4').innerHTML=""
     document.getElementById('demo5').innerHTML=""
+    document.getElementById('demo6').innerHTML=""
     document.getElementById('b3').style.visibility="hidden"
      document.getElementById('b4').style.visibility="hidden"   
 }
 }
 }
-    
+    function check()
+{
+
+  var x=String(document.getElementById("demo5").innerHTML).replace(/\s+$/, '');
+  c=0;
+  p=0
+  if(document.getElementById("eng").selected)
+  {
+  for(i=0;i<10;i++)
+  {
+    for(j=0;j<main[i].length;j++)
+    {
+
+      if(x==main[i][j])
+      {
+           
+        c++;
+
+      }
+    }
+  }
+
+if(c==1)
+{
+      document.getElementById("demo6").innerHTML="<span style='color:green;font-size:30px'>Right answer!!!</span>"
+
+}
+else
+{
+      document.getElementById("demo6").innerHTML="<span style='color:red;font-size:30px'>Wrong answer!!!</span>"
+  
+}
+
+}
+
+ else if(document.getElementById("hin").selected)
+  {
+  for(i=0;i<7;i++)
+  {
+    for(j=0;j<main1[i].length;j++)
+    {
+
+      if(x==main1[i][j])
+      {
+           
+        p++;
+
+      }
+    }
+  }
+
+
+if(p==1)
+{
+      document.getElementById("demo6").innerHTML="<span style='color:green;font-size:30px'>Right answer!!!</span>"
+
+}
+else
+{
+      document.getElementById("demo6").innerHTML="<span style='color:red;font-size:30px'>Wrong answer!!!</span>"
+  
+}
+
+}
+}
+
 
   
   
