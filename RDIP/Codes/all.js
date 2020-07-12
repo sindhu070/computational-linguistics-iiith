@@ -33,6 +33,8 @@ x1=x.split(" ");
 	document.getElementById("demo5").innerHTML=""
 	document.getElementById("demo4").innerHTML=""
 	document.getElementById("demo6").innerHTML=""
+	document.getElementById("demo7").innerHTML=""
+	document.getElementById("b5").innerHTML="Get Correct Sentence"
 
 
 
@@ -156,13 +158,14 @@ function reset()
     document.getElementById('demo4').innerHTML=""
     document.getElementById('demo5').innerHTML=""
     document.getElementById('demo6').innerHTML=""
+    document.getElementById("demo7").innerHTML=""
     document.getElementById('b3').style.visibility="hidden"
      document.getElementById('b4').style.visibility="hidden"  
      document.getElementById("b5").style.visibility="hidden"; 
 }
 }
 }
-    function check()
+function check()
 {
 
   var x=String(document.getElementById("demo5").innerHTML).replace(/\s+$/, '');
@@ -229,6 +232,82 @@ else
 
 }
 }
+
+
+function toggle()
+{
+a=maineng.indexOf(x)
+s=main[a]
+b=mainhin.indexOf(y)
+r=main1[b]
+
+
+
+if(document.getElementById("eng").selected)
+	{
+		if(document.getElementById("b5").innerHTML=="Get Correct Sentence")
+		{
+       for(i=0;i<s.length;i++)
+  { 
+   document.getElementById("demo7").innerHTML+=s[i]+"<br>";
+   document.getElementById("b5").innerHTML="Hide the correct Sentence" 
+} 
+}
+else if(document.getElementById("b5").innerHTML=="Hide the correct Sentence")
+	{
+		
+   document.getElementById("demo7").innerHTML=""
+   document.getElementById("b5").innerHTML="Get Answers"
+}
+else if(document.getElementById("b5").innerHTML=="Get Answers")
+{
+
+       for(i=0;i<s.length;i++)
+  { 
+   document.getElementById("demo7").innerHTML+=s[i]+"<br>";
+   document.getElementById("b5").innerHTML="Hide the correct Sentence" 
+} 
+}
+}
+else if(document.getElementById("hin").selected)
+	{ 
+
+		if(document.getElementById("b5").innerHTML=="Get Correct Sentence")
+		{
+       for(i=0;i<r.length;i++)
+  { 
+   document.getElementById("demo7").innerHTML+=r[i]+"<br>";
+   document.getElementById("b5").innerHTML="Hide the correct Sentence" 
+} 
+}
+else if(document.getElementById("b5").innerHTML=="Hide the correct Sentence")
+	{
+		
+   document.getElementById("demo7").innerHTML=""
+   document.getElementById("b5").innerHTML="Get Answers"
+}
+else if(document.getElementById("b5").innerHTML=="Get Answers")
+{
+
+	for(i=0;i<r.length;i++)
+
+  {
+   
+   document.getElementById("demo7").innerHTML+=r[i]+"<br>";
+   document.getElementById("b5").innerHTML="Hide the correct Sentence" 
+}	
+ 
+}
+}
+}
+
+
+
+
+
+
+
+
 
 
   

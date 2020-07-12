@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>IndexPage</title>
+	<title>Index Page</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
 
 
 <style>
@@ -28,8 +30,7 @@
   font-family: serif;
   background-color: 
 #CCEEEE;
-
-  height: 1000px;
+  height: 1250px;
   text-align: left;
   padding-left:5px;
 
@@ -66,7 +67,7 @@ color:white;
 .navbar2
 {
     background-color: white;
-    height:900px;
+    height:1200px;
     font-family: sans-serif;
     margin:30px;
     box-shadow: 0px 20px 25px 5px   lightslategray;
@@ -163,6 +164,12 @@ button {
  font-size:15px;
   margin: 10px;
 }
+#demo7
+{
+  font-size:20px;
+  color :black;
+  line-height: 1.6;
+}
 </style></head>
   <body><center>
         <section class="h2">
@@ -184,7 +191,8 @@ button {
    <button id="b3" style="visibility: hidden" onclick="reset()">Re-form the sentence</button><br>
 <button id="b4" style="visibility: hidden" onclick="check()" >Check the correctness of this sentence</button>
 <p id="demo6"></p>
-<button id="b5" style="visibility: hidden" >Get Correct Sentence</button>
+<button id="b5" style="visibility: hidden" onclick="toggle()">Get Correct Sentence</button><br>
+<p id="demo7"></p>
  </center>
   </section>
      <script src="all.js"></script>
