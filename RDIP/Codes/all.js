@@ -74,7 +74,7 @@ for(i=0;i<x1.length;i++)
 button.addEventListener ("click", function() {
 	document.getElementById("demo4").innerHTML="Formed Sentence<span style='font-style:italic;color:blue;font-weight:lighter'>(after selecting words):</span>";
     document.getElementById("demo5").innerHTML+=this.innerHTML+" ";
-    this.style.visibility="hidden";
+    this.style.display="none";
     count=count+1;
  
     if (count>0 ) 
@@ -119,7 +119,9 @@ for(i=0;i<y1.length;i++)
 button.addEventListener ("click", function() {
 	document.getElementById("demo4").innerHTML="Formed Sentence<span style='font-style:italic;color:blue;font-weight:lighter'>(after selecting words):</span>";
     document.getElementById("demo5").innerHTML+=this.innerHTML+" ";
-    this.style.visibility="hidden";
+    
+
+    this.style.display="none";
     count=count+1;
 
     if (count>0) 
@@ -135,12 +137,15 @@ button.addEventListener ("click", function() {
      }
 });
 
+
+
 }
 }
 
 
 else
 {
+	
 	document.getElementById("demo").innerHTML=""
 	document.getElementById("demo1").innerHTML=""
 	document.getElementById("demo3").innerHTML=""
@@ -152,9 +157,11 @@ function reset()
 
   for(i=0;i<x1.length||i<y1.length;i++)
   {
-    if(document.getElementById('button'+i).style.visibility=="hidden")
+    if(document.getElementById('button'+i).style.display=="none")
     {
-   document.getElementById('button'+i).style.visibility="visible";
+   document.getElementById('button'+i).style.display="inline";
+
+
     document.getElementById('demo4').innerHTML=""
     document.getElementById('demo5').innerHTML=""
     document.getElementById('demo6').innerHTML=""
@@ -163,11 +170,14 @@ function reset()
      document.getElementById('b4').style.visibility="hidden"  
      document.getElementById("b5").style.visibility="hidden"; 
 }
+
 }
+
 }
 function check()
 {
-
+document.getElementById("b5").innerHTML="Get Correct Sentence"
+ document.getElementById("demo7").innerHTML=""
   var x=String(document.getElementById("demo5").innerHTML).replace(/\s+$/, '');
   c=0;
   p=0
