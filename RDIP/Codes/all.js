@@ -67,7 +67,7 @@ for(i=0;i<x1.length;i++)
 {
 		 let button = document.createElement("button");
 		 button.id='button'+i;
-	
+	button.className="btn btn-secondary"
   button.innerHTML = x1[i]
   body.appendChild(button);
      
@@ -113,6 +113,7 @@ for(i=0;i<y1.length;i++)
 {
 		 let button = document.createElement("button");
 		 button.id='button'+i
+		 button.className="btn btn-secondary"
   button.innerHTML = y1[i]
   body.appendChild(button)
 

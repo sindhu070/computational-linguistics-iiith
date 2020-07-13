@@ -15,7 +15,7 @@
 
   body
   {
-    max-width:1030px;
+    max-width:1150px;
     max-height:1000px;
     margin:auto;
 
@@ -68,6 +68,7 @@ color:white;
 {
     background-color: white;
     height:1200px;
+    width:1070px;
     font-family: sans-serif;
     margin:30px;
     box-shadow: 0px 20px 25px 5px   lightslategray;
@@ -109,8 +110,7 @@ padding-bottom: 10px
      line-height: 0.1;
      color:#00009C;
      font-weight: bolder;
-     padding-bottom: 10px;
-
+     
 }
 #demo4
 {
@@ -124,31 +124,29 @@ padding-bottom: 10px
 }
 #demo5
 {
-   font-size:16px;
+   font-size:30px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
      line-height: 0.1;
-     color:#00009C;
+     color: #484848;
      font-weight: bolder;
      padding-bottom: 10px;
 
 }
 button {
-  width: 90px;
+  width: 100px;
   height: 30px;
   margin: 2px;
 
+
 }
-#demo5
-{
-  font-size: 30px;
-  color :#484848;
-}
+
  #b3
 {
   width: 190px;
   height: 30px;
  font-size:15px;
   margin: 10px;
+   padding:2px;
 }
 #b4
 {
@@ -156,6 +154,7 @@ button {
   height: 30px;
  font-size:15px;
   margin: 10px;
+   padding:2px;
 }
  #b5
 {
@@ -163,12 +162,14 @@ button {
   height: 30px;
  font-size:15px;
   margin: 10px;
+  padding:2px;
 }
 #demo7
 {
   font-size:20px;
   color :black;
   line-height: 1.6;
+ 
 }
 </style></head>
   <body><center>
@@ -179,20 +180,22 @@ button {
   <section id="experiment">
     <h4>Experiment</h4>
     <center>
-      <select onchange="fun1()">
+      <div class="form-group">
+        <div class="col-sm-5">
+      <select onchange="fun1()" class="form-control input-small">
          <option value="none" selected>---Select Language---</option>
       <option  id="eng" >English</option>
-   <option value="Hindi" id="hin" >Hindi</option></select><br><br>
+   <option value="Hindi" id="hin" >Hindi</option></select></div></div><br>
    <p id="demo"></p>
    <p id="demo1" style="color:blue; font-style: italic;font-weight:lighter;"></p>
    <p id="demo3"></p>
-   <p id="demo4"></p>
+   <p id="demo4" ></p>
    <p id="demo5" ></p>
-   <button id="b3" style="visibility: hidden" onclick="reset()">Re-form the sentence</button><br>
-<button id="b4" style="visibility: hidden" onclick="check()" >Check the correctness of this sentence</button>
+   <button id="b3" style="visibility: hidden" onclick="reset()" class="btn btn-secondary">Re-form the sentence</button><br>
+<button id="b4" style="visibility: hidden" onclick="check()" class="btn btn-secondary">Check the correctness of this sentence</button>
 <p id="demo6"></p>
-<button id="b5" style="visibility: hidden" onclick="toggle()">Get Correct Sentence</button><br>
-<p id="demo7"></p>
+<button id="b5" style="visibility: hidden" onclick="toggle()" class="btn btn-secondary">Get Correct Sentence</button><br>
+<p id="demo7" ></p>
  </center>
   </section>
      <script src="all.js"></script>
