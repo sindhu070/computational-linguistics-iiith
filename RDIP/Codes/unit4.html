@@ -2,10 +2,70 @@
 <html>
 <head>
 	<title>Unit-4</title>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+#experiment h4
+{
+padding-left:60px;
+padding-top: 44px;
+padding-bottom: 10px
+}
+#experiment select
+{
+  font-size:15px;
+    
+    }
+#p1
+{
+font-size:20px;
+margin-left:60px;
+margin-right:60px;
+color:black;
+line-height: 1.6;
+
+ 
+}
+
+
+ </style>
 </head>
 <body>
+
+
+
+
+
+
+ <section id="experiment">
+    <h4>Experiment</h4>
+    <center>
+      <div class="form-group">
+        <div class="col-sm-5">
+      <select onchange="f1()" class="form-control input-small">
+         <option value="none" selected>---Select a corpus---</option>
+      <option value="Corpus 1" id="c1" >Corpus 1</option>
+   <option value="Corpus 2" id="c2" >Corpus 2</option>
+   <option value="Corpus 3" id="c3" >Corpus 3</option>
+</select></div></div><br>
+<p id="p1"></p>
+
+
+
+
+
+
+
+
+
+
+
+
 <script src="C:\Users\Sindhu\Desktop\demo\computational-linguistics-iiith\RDIP\Libraries\node_modules\snowball\require.js"></script>
 <script src="C:\Users\Sindhu\Desktop\demo\computational-linguistics-iiith\RDIP\Libraries\node_modules\snowball\stemmer\lib\Snowball.min.js"></script>
 <script src="unit4.js"></script>
+
 </body>
 </html>
