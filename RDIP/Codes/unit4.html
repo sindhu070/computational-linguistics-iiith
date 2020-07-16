@@ -23,10 +23,34 @@ padding-bottom: 10px
 font-size:20px;
 margin-left:60px;
 margin-right:60px;
-color:black;
+color:	#484848;
 line-height: 1.6;
+font-family: sans-serif;
+}
+#p2
+{
+font-size:20px;
+margin-left:60px;
+margin-right:60px;
+color:	#484848;
+line-height: 1.6;
+font-family: sans-serif;
+}
+table
+{
+	  border-collapse: collapse;
+}
+td,tr
+{
+	border:2px solid grey;
+	padding:10px;
+	color:	#484848;
 
- 
+}
+input[type="text"]
+{
+	width:90px;
+	height:30px;
 }
 
 
@@ -50,7 +74,11 @@ line-height: 1.6;
    <option value="Corpus 2" id="c2" >Corpus 2</option>
    <option value="Corpus 3" id="c3" >Corpus 3</option>
 </select></div></div><br>
-<p id="p1"></p>
+<p id="p1"></p><br>
+<p id="p2" style="visibility: hidden">Enter the number of tokens and types for the above corpus:</p>
+<table id="t1" style="visibility: hidden" ><tr><td>#tokens:</td><td><input type="text"></td></tr><tr><td>#types:</td><td><input type="text" ></td></tr></table><br>
+<button id="b1" style="visibility: hidden">Submit</button>
+
 
 
 
