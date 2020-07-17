@@ -127,6 +127,25 @@ console.log(lvalue)
 return lvalue
 
 }
+function valid2(c)
+{
+	if(document.getElementById('t33').value=='')
+{
+	document.getElementById('t33').style.backgroundColor=''
+	
+}
+else if(document.getElementById('t33').value==c)
+{
+	document.getElementById('t33').style.backgroundColor='green'
+
+}
+else
+{
+	document.getElementById('t33').style.backgroundColor='red'
+	
+}
+
+}
 
 
 
