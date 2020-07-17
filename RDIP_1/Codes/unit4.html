@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unit-4</title>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+#experiment h4
+{
+padding-left:60px;
+padding-top: 44px;
+padding-bottom: 10px
+}
+#experiment select
+{
+  font-size:15px;
+    
+    }
+#p1
+{
+font-size:20px;
+margin-left:60px;
+margin-right:60px;
+color:	#484848;
+line-height: 1.6;
+font-family: sans-serif;
+}
+#p2
+{
+font-size:20px;
+margin-left:60px;
+margin-right:60px;
+color:	#484848;
+line-height: 1.6;
+font-family: sans-serif;
+}
+table
+{
+	  border-collapse: collapse;
+}
+td,tr
+{
+	border:2px solid grey;
+	padding:10px;
+	color:	#484848;
+
+}
+input[type="text"]
+{
+	width:90px;
+	height:30px;
+}
+
+
+ </style>
+</head>
+<body>
+ <section id="experiment">
+    <h4>Experiment</h4>
+    <center>
+      <div class="form-group">
+        <div class="col-sm-3">
+      <select onchange="fun1()" class="form-control input-small">
+         <option value="none" selected>---Select a corpus---</option>
+      <option value="Corpus 1" id="c1" >Corpus 1</option>
+   <option value="Corpus 2" id="c2" >Corpus 2</option>
+   <option value="Corpus 3" id="c3" >Corpus 3</option>
+</select></div></div><br>
+<p id="p1"></p><br>
+<p id="p2" style="visibility: hidden">Enter the number of tokens and types for the above corpus:</p>
+<form name="a"><table id="t1" style="visibility: hidden" ><tr><td>#tokens:</td><td><input type="text"  name="t11" id="t11"></td></tr><tr><td>#types:</td><td><input type="text" name="t12" id="t12"></td></tr></table></form><br>
+<button id="b1" style="visibility: hidden" onclick="f1=token_check();f2=type_check();
+if(parseInt(a.t11.value)==f1)
+{
+	document.getElementById('t11').style.backgroundColor='green'
+}
+else
+{
+	document.getElementById('t11').style.backgroundColor='red'
+}
+if(parseInt(a.t12.value)==f2)
+{
+	document.getElementById('t12').style.backgroundColor='green'
+}
+else
+{
+	document.getElementById('t12').style.backgroundColor='red'
+}
+if((document.getElementById('t12').style.backgroundColor=='green')&& (document.getElementById('t11').style.backgroundColor=='green'))
+{
+	document.getElementById('p3').innerHTML='<span style=\'color:green;font-size:20px\'>Right Answer</span>'
+	document.getElementById('b2').style.visibility='visible'
+
+}
+else
+{
+	document.getElementById('p3').innerHTML='<span style=\'color:red;font-size:20px\'>Wrong Answer</span>'
+	document.getElementById('b2').style.visibility='hidden'
+}">Submit</button>
+
+
+<br><br>
+<p id='p3'></p>
+<button id="b2" style="visibility: hidden">Continue</button>
+
+
+
+
+
+
+
+<script src="C:\Users\Sindhu\Desktop\demo\computational-linguistics-iiith\RDIP\Libraries\node_modules\snowball\require.js"></script>
+<script src="C:\Users\Sindhu\Desktop\demo\computational-linguistics-iiith\RDIP\Libraries\node_modules\snowball\stemmer\lib\Snowball.min.js"></script>
+<script src="unit4.js"></script>
+</body>
+</html>
