@@ -1,0 +1,6 @@
+The Top-Level Functionalities in the experiment are:
+1)We have to identify the tokens and types in the given corpus.
+2)When correct values of token and types is entered the textbox turns green otherwise it turns red adn as message "WRONG ANSWER!!" will be displayed.
+3)If both the answers are right,submit button is activated along with the RIGHT ANSWER!! message.
+4)If the all the words with same root are selected then the simulation wil be completed else same error message will be generated.
+
