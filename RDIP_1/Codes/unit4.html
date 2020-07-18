@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Unit-4</title>
+	<title>Unit-4(tokens and types)</title>
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -9,13 +9,19 @@
   <style>
   	body
   	{
-  		margin-bottom:500px;
-  	}
+  	
+  		background-color:#FFEBCD;
+  		  border-radius: 25px;
+  		
+}
+
+
 #experiment h4
 {
 padding-left:60px;
 padding-top: 44px;
 padding-bottom: 10px
+
 }
 #experiment select
 {
@@ -83,11 +89,15 @@ input[type="text"]
 	width:90px;
 	height:30px;
 }
-
+#t33
+{
+	background-color: "white"
+}
 
  </style>
 </head>
 <body>
+	<div class="center">
  <section id="experiment">
     <h4>Experiment</h4>
     <center>
@@ -103,7 +113,7 @@ input[type="text"]
 <p id="p2" style="visibility: hidden">Enter the number of tokens and types for the above corpus:</p>
 
 <form name="a"><table id="t1" style="visibility: hidden" ><tr><td>#tokens:</td><td><input type="text"  name="t11" id="t11"></td></tr><tr><td>#types:</td><td><input type="text" name="t12" id="t12"></td></tr></table></form><br>
-<button id="b1" style="visibility: hidden" onclick="f1=token_check();f2=type_check();
+<button class="btn btn-secondary" id="b1" style="visibility: hidden" onclick="f1=token_check();f2=type_check();
 if(parseInt(a.t11.value)==f1)
 {
 	document.getElementById('t11').style.backgroundColor='green'
@@ -122,22 +132,25 @@ else
 }
 if((document.getElementById('t12').style.backgroundColor=='green')&& (document.getElementById('t11').style.backgroundColor=='green'))
 {
-	document.getElementById('p3').innerHTML='<span style=\'color:green;font-size:20px\'>Right Answer</span>'
+	document.getElementById('p3').innerHTML='<span style=\'color:green;font-size:30px\'>Right Answer</span>'
 	document.getElementById('b2').style.visibility='visible'
 
 }
 else
 {
-	document.getElementById('p3').innerHTML='<span style=\'color:red;font-size:20px\'>Wrong Answer</span>'
+	document.getElementById('p3').innerHTML='<span style=\'color:red;font-size:30px\'>Wrong Answer</span>'
 	document.getElementById('b2').style.visibility='hidden'
 }">Submit</button>
 
 <p id='p4'></p>
-<form name="b"><p id='p5' ></p><input type="text" name="t33" id="t33" style="visibility: hidden;background-color: ''"></form>
+<p id='p5' ></p><input type="text" name="t33" id="t33" style="visibility: hidden;">
 <p id='p3'></p>
-<button id="b2" style="visibility: hidden" onclick="reappear();c=validation();valid2(c)">Continue</button>
+<button  class="btn btn-secondary" id="b2" style="visibility: hidden" onclick="reappear();l=validation();c++;if(c>=2){valid2(l)}">Continue</button>
 <br><br>
 <p id='p6'></p>
+</center>
+</section>
+</div>
 <script src="C:\Users\Sindhu\Desktop\demo\computational-linguistics-iiith\RDIP_1\Libraries\node_modules\stopwords-iso\require.js"></script>
 <script src="C:\Users\Sindhu\Desktop\demo\computational-linguistics-iiith\RDIP_1\Libraries\node_modules\snowball\stemmer\lib\Snowball.min.js"></script>
 <script src="unit4.js"></script>
