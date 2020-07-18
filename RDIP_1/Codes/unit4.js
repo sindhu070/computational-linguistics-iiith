@@ -22,6 +22,7 @@ document.getElementById("t33").style.backgroundColor=""
 document.getElementById('p3').innerHTML=''
 document.getElementById('p4').innerHTML=''
 document.getElementById('p5').innerHTML=''
+document.getElementById('p6').innerHTML=''
 document.getElementById('b2').style.visibility='hidden'
 document.getElementById("b2").innerHTML="Continue"
 if(document.getElementById("c1").selected)
@@ -132,17 +133,19 @@ function valid2(c)
 	if(document.getElementById('t33').value=='')
 {
 	document.getElementById('t33').style.backgroundColor=''
+	document.getElementById('p6').innerHTML=''
 	
 }
 else if(document.getElementById('t33').value==c)
 {
 	document.getElementById('t33').style.backgroundColor='green'
+	document.getElementById('p6').innerHTML='<span style=\'color:green;font-size:20px\'>Right Answer</span>'
 
 }
 else
 {
 	document.getElementById('t33').style.backgroundColor='red'
-	
+	document.getElementById('p6').innerHTML='<span style=\'color:red;font-size:20px\'>Wrong Answer</span>'
 }
 
 }
