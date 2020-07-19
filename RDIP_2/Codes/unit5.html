@@ -14,6 +14,31 @@ padding-left:60px;
 padding-top: 44px;
 padding-bottom: 10px
 }
+
+td
+{
+	border:2px solid grey;
+	padding:15px;
+	font-size: large;
+
+	
+}
+tr:nth-child(1)
+{
+  color:darkred;
+  font-size:x-large;
+}
+#demo1
+{
+   font-size:18px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+     line-height: 0.1;
+     color:#00009C;
+     font-weight: lighter;
+
+}
+
+
 </style>
 </head>
 <body>
@@ -25,8 +50,8 @@ padding-bottom: 10px
    <option value="Hindi" id="hin" >Hindi</option></select></div><br>
    <!--English sentences!-->
 <div class="col-sm-5" id="edrop" style="display:none">
-	<select onchange="" class="form-control input-small">
-         <option value="none" selected>---Select a sentence---</option>
+	<select onchange="fun2()" class="form-control input-small" id="edrop1">
+         <option value="none" selected id="wowe">---Select a sentence---</option>
       <option  id="se1" >The child liked the chocolate.</option>
    <option  id="se2" >She was stopped by the bravest knight.</option>
   <option  id="se3" >Mary baked a cake for his birthday</option>
@@ -35,14 +60,23 @@ padding-bottom: 10px
    </select></div>
    <!--Hindi sentences!-->
 <div class="col-sm-4" id="hdrop" style="display:none">
-	<select onchange="" class="form-control input-small">
-         <option value="none" selected>---Select Language---</option>
+	<select onchange="fun3()" class="form-control input-small" id="hdrop1">
+         <option value="none" selected id="wowh">---Select a sentence---</option>
       <option  id="sh1" >राम ने सीता के लिए फल तोड़ा।</option>
    <option id="sh2" >छोटे बच्चे पाठशाला जल्दी आयेंगे।</option>
  <option  id="sh3" >मेहनत का फल मीठा होता है।</option>
    <option id="sh4" >वाह! वह खूबसूरत है।</option>
     <option  id="sh5" >पेड़ से पत्ते गिर गए।</option>
  </select></div><br>
+
+<p id="demo"> <p id="demo1"></p><table border="1" id="t1"></table></p>
+<button id="b1"  style="visibility: hidden">Submit</button>
+
+
+
+
+
+
 </center>
 <script src="unit5.js"></script>
 </body>

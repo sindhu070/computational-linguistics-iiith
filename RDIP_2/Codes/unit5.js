@@ -4,15 +4,153 @@ var hindi=['राम ने सीता के लिए फल तोड़ा�
 //console.log(english)
 function fun1()
 {
+
 document.getElementById("edrop").style.display="none"
 document.getElementById("hdrop").style.display="none"
+document.getElementById("demo").innerHTML=""
+document.getElementById("demo1").innerHTML=""
+document.getElementById("t1").innerHTML=""
+document.getElementById("b1").style.visibility="hidden"
+
+
 	if(document.getElementById("eng").selected)
 	{
+document.getElementById("wowe").selected=true
       document.getElementById("edrop").style.display="block"
 
 	}
 	else if(document.getElementById("hin").selected)
 	{
+document.getElementById("wowh").selected=true
 		  document.getElementById("hdrop").style.display="block"
 	}
+else
+{
+	document.getElementById("demo").innerHTML=""
+document.getElementById("demo1").innerHTML=""
+document.getElementById("t1").innerHTML=""
+}
+}
+function fun2()
+{
+document.getElementById("demo1").innerHTML="<span style='font-style:italic;color:blue;'>Select the POS tag for corresponding words</span>"
+document.getElementById("b1").style.visibility="visible"
+	var table1=document.getElementsByTagName("table")[0]
+	table1.innerHTML=""
+	e=document.getElementById("edrop1")
+	var ans = e.options[e.selectedIndex].text;
+	if(ans!="---Select a sentence---")
+	{
+	ans=ans.replace(/\.$/, "");
+	ans1=ans.split(" ")
+	len=ans1.length
+ var tr1 = document.createElement('tr'); 
+     var td = document.createElement('td');
+      var t= document.createElement('td');
+       var t1= document.createElement('td');
+        var t2= document.createElement('td');
+     var text5 = document.createTextNode("LEXICON");
+     var text6 = document.createTextNode("POS");
+     var text7 = document.createTextNode(" ");
+     var text8 = document.createTextNode(" ");
+     td.appendChild(text5)
+     t.appendChild(text6)
+tr1.appendChild(td)
+tr1.appendChild(t)
+tr1.appendChild(t1)
+tr1.appendChild(t2)
+table1.appendChild(tr1)
+for (var i = 0; i < len; i++)
+{
+    var tr = document.createElement('tr'); 
+    var td1 = document.createElement('td');
+     var td2 = document.createElement('td');
+     var td3 = document.createElement('td');
+     var td4 = document.createElement('td');
+    var text1 = document.createTextNode(ans1[i]);
+     var x = document.createTextNode(" ");
+ var text3 = document.createTextNode(" ");
+ var text4 =document.createTextNode(" ");
+    td1.appendChild(text1);
+    td2.appendChild(x);
+    td3.appendChild(text3);
+    td4.appendChild(text4);
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    tr.appendChild(td4);
+    table1.appendChild(tr);
+}
+}
+else
+{
+	alert("please select a sentence")
+	document.getElementById("demo").innerHTML=""
+document.getElementById("demo1").innerHTML=""
+document.getElementById("t1").innerHTML=""
+document.getElementById("b1").style.visibility="hidden"
+}
+ 
+}
+function fun3()
+{
+	document.getElementById("demo1").innerHTML="<span style='font-style:italic;color:blue;'>Select the POS tag for corresponding words</span>"
+document.getElementById("b1").style.visibility="visible"
+	var table1=document.getElementsByTagName("table")[0]
+	table1.innerHTML=""
+	e=document.getElementById("hdrop1")
+	var ans = e.options[e.selectedIndex].text;
+	if(ans!="---Select a sentence---")
+	{
+	ans=ans.slice(0, -1)
+	ans1=ans.split(" ")
+	len=ans1.length
+ var tr1 = document.createElement('tr'); 
+     var td = document.createElement('td');
+      var t= document.createElement('td');
+       var t1= document.createElement('td');
+        var t2= document.createElement('td');
+     var text5 = document.createTextNode("LEXICON");
+     var text6 = document.createTextNode("POS");
+     var text7 = document.createTextNode(" ");
+     var text8 = document.createTextNode(" ");
+     td.appendChild(text5)
+     t.appendChild(text6)
+tr1.appendChild(td)
+tr1.appendChild(t)
+tr1.appendChild(t1)
+tr1.appendChild(t2)
+table1.appendChild(tr1)
+for (var i = 0; i < len; i++)
+{
+    var tr = document.createElement('tr'); 
+    var td1 = document.createElement('td');
+     var td2 = document.createElement('td');
+     var td3 = document.createElement('td');
+     var td4 = document.createElement('td');
+    var text1 = document.createTextNode(ans1[i]);
+    var x = document.createTextNode(" ");
+
+ var text3 = document.createTextNode(" ");
+ var text4 =document.createTextNode(" ");
+    td1.appendChild(text1);
+    td2.appendChild(x);
+    td3.appendChild(text3);
+    td4.appendChild(text4);
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    tr.appendChild(td4);
+    table1.appendChild(tr);
+}
+
+}
+else
+{
+	alert("please select a sentence")
+	document.getElementById("demo").innerHTML=""
+document.getElementById("demo1").innerHTML=""
+document.getElementById("t1").innerHTML=""
+document.getElementById("b1").style.visibility="hidden"
+}
 }
