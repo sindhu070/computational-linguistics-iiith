@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unit-5</title>
+	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+h4
+{
+padding-left:60px;
+padding-top: 44px;
+padding-bottom: 10px
+}
+</style>
+</head>
+<body>
+	<h4>Experiment</h4><center>
+	<div class="col-sm-3">
+	<select onchange="fun1()" class="form-control input-small">
+         <option value="none" selected>---Select Language---</option>
+      <option  id="eng" >English</option>
+   <option value="Hindi" id="hin" >Hindi</option></select></div><br>
+   <!--English sentences!-->
+<div class="col-sm-5" id="edrop" style="display:none">
+	<select onchange="" class="form-control input-small">
+         <option value="none" selected>---Select a sentence---</option>
+      <option  id="se1" >The child liked the chocolate.</option>
+   <option  id="se2" >She was stopped by the bravest knight.</option>
+  <option  id="se3" >Mary baked a cake for his birthday</option>
+   <option  id="se4" >She decorated the cake carefully</option>
+     <option  id="se5" >Mary wore a dress with polka dots.</option>
+   </select></div>
+   <!--Hindi sentences!-->
+<div class="col-sm-4" id="hdrop" style="display:none">
+	<select onchange="" class="form-control input-small">
+         <option value="none" selected>---Select Language---</option>
+      <option  id="sh1" >राम ने सीता के लिए फल तोड़ा।</option>
+   <option id="sh2" >छोटे बच्चे पाठशाला जल्दी आयेंगे।</option>
+ <option  id="sh3" >मेहनत का फल मीठा होता है।</option>
+   <option id="sh4" >वाह! वह खूबसूरत है।</option>
+    <option  id="sh5" >पेड़ से पत्ते गिर गए।</option>
+ </select></div><br>
+</center>
+<script src="unit5.js"></script>
+</body>
