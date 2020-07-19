@@ -10,7 +10,7 @@ document.getElementById("hdrop").style.display="none"
 document.getElementById("demo").innerHTML=""
 document.getElementById("demo1").innerHTML=""
 document.getElementById("t1").innerHTML=""
-//document.getElementById("b1").style.visibility="hidden"
+document.getElementById("b1").style.visibility="hidden"
 
 
 	if(document.getElementById("eng").selected)
@@ -34,7 +34,8 @@ document.getElementById("t1").innerHTML=""
 function fun2()
 {
 document.getElementById("demo1").innerHTML="<span style='font-style:italic;color:blue;'>Select the POS tag for corresponding words</span>"
-//document.getElementById("b1").style.visibility="visible"
+
+document.getElementById("b1").style.visibility="visible"
 	var table1=document.getElementsByTagName("table")[0]
 	table1.innerHTML=""
 	e=document.getElementById("edrop1")
@@ -116,14 +117,14 @@ else
 	document.getElementById("demo").innerHTML=""
 document.getElementById("demo1").innerHTML=""
 document.getElementById("t1").innerHTML=""
-//document.getElementById("b1").style.visibility="hidden"
+document.getElementById("b1").style.visibility="hidden"
 }
  
 }
 function fun3()
 {
 	document.getElementById("demo1").innerHTML="<span style='font-style:italic;color:blue;'>Select the POS tag for corresponding words</span>"
-//document.getElementById("b1").style.visibility="visible"
+document.getElementById("b1").style.visibility="visible"
 	var table1=document.getElementsByTagName("table")[0]
 	table1.innerHTML=""
 	e=document.getElementById("hdrop1")
@@ -167,16 +168,14 @@ var op5 = new Option();
 var op6 = new Option();
 var op7 = new Option();
 var op8 = new Option();
-var op9 = new Option();
 op1.text = "Noun";
 op2.text = "Pronoun";
 op3.text = "Verb";
 op4.text = "Adjective";
 op5.text = "Adverb";
-op6.text = "Determiner";
-op7.text = "Postposition";
-op8.text = "Conjunction";
-op9.text = "Interjection";
+op6.text = "Postposition";
+op7.text = "Conjunction";
+op8.text = "Interjection";
 x.options.add(op1);
 x.options.add(op2);
 x.options.add(op3);
@@ -185,7 +184,7 @@ x.options.add(op5);
 x.options.add(op6);
 x.options.add(op7);
 x.options.add(op8);
-x.options.add(op9);
+
  var text3 = document.createTextNode(" ");
  var text4 =document.createTextNode(" ");
     td1.appendChild(text1);
@@ -206,6 +205,6 @@ else
 	document.getElementById("demo").innerHTML=""
 document.getElementById("demo1").innerHTML=""
 document.getElementById("t1").innerHTML=""
-//document.getElementById("b1").style.visibility="hidden"
+document.getElementById("b1").style.visibility="hidden"
 }
 }
