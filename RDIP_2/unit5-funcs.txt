@@ -1,0 +1,7 @@
+The Top-Level Functionalities in the experiment are:
+1)We have to include two dropdowns,one for language and the other for sentences in that language.
+2)once we select a statement,a table will be displayed with four columns out of which two are empty.
+3)With the help of POS tagging we have to associate each word with it's parts of speech and evaluate it
+4)If the selected answer is right, we have to display the answer in third column otherwise wrong answer along with get correct answer button.
+5)If this button is clicked,the answers are displayed in fourth column.
+
